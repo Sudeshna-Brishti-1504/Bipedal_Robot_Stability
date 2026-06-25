@@ -1,7 +1,7 @@
-# Bipedal Walking Robot using Model Predictive Control (MPC)
+# Bipedal Walking Robot using Model Predictive Control (MPC) and Model Referenc eAdaptive Control (MRAC)
 
 ## Project Overview
-This project simulates the walking gait of a bipedal robot using a Model Predictive Controller (MPC). The physical robot kinematics and dynamics are modeled using Simscape Multibody, while the MPC algorithm generates the optimal control actions to maintain balance and achieve forward locomotion.
+This project simulates the walking gait of a bipedal robot using a Model Predictive Controller (MPC) and Model Reference Adaptove Control (MRAC). The physical robot kinematics and dynamics are modeled using Simscape Multibody, while the MPC algorithm generates the optimal control actions to maintain balance and achieve forward locomotion, MRAC algorithm provides the stablility in the situation of a time-varying payload (ramp-increasing payload on the torso of the robot).
 
 ## Repository Navigation
 This folder (`Project/sudeshna_23334/`) is organized as per the course submission guidelines:
