@@ -1,8 +1,5 @@
 # Bipedal Walking Robot using Model Predictive Control (MPC)
 
-**Authors:** SUDESHNA RAY (Roll-23334), AVANI BARANWAL (Roll-23047), RAMANDEEP SINGH HORA (Roll-23265)  
-**Course:** ECS-334/434/684 (Linear Control Systems)
-
 ## Project Overview
 This project simulates the walking gait of a bipedal robot using a Model Predictive Controller (MPC). The physical robot kinematics and dynamics are modeled using Simscape Multibody, while the MPC algorithm generates the optimal control actions to maintain balance and achieve forward locomotion.
 
@@ -33,8 +30,6 @@ This folder (`Project/sudeshna_23334/`) is organized as per the course submissio
   * `robotbodywithoutMPC and robotlegwithoutMPC` - Simscape multibody blocks image of the primary robot body without MPC imprementation.
   * `robotbodywithMPC and robotlegwithMPC` - Simscape multibody blocks image of the robot body with MPC imprementation.
   * `MPC_MV_output_rightlegleg and MPC_MV_output_leftleg` - Scope output of the manipulated Variables of MPC (ZMP velocity of right leg and left leg respectively).
-  
-* **`report/`**: Contains `report.pdf`, detailing the mathematical modeling, controller design, and analysis of the results.
 
 * **`requirements.txt`**: Lists all required MATLAB toolboxes.
 
