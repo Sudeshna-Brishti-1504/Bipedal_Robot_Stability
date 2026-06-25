@@ -4,12 +4,13 @@
 This project simulates the walking gait of a bipedal robot using a Model Predictive Controller (MPC) and Model Reference Adaptove Control (MRAC). The physical robot kinematics and dynamics are modeled using Simscape Multibody, while the MPC algorithm generates the optimal control actions to maintain balance and achieve forward locomotion, MRAC algorithm provides the stablility in the situation of a time-varying payload (ramp-increasing payload on the torso of the robot).
 
 ## Repository Navigation
-This folder (`Project/sudeshna_23334/`) is organized as per the course submission guidelines:
+This folder is organized as per the course submission guidelines:
 
 * **`src/`**: Contains the source codes (Simulink models and code files).
-  * `bipedal_walk_sims` - Folder containing the 2 simulations as follows:
+  * `bipedal_walk_sims` - Folder containing the 3 simulations as follows:
   * `ContactForce.slx` - The Simulink/Simscape Multibody model which establishes the contact force between the robo feet and the ground solid. Without this file, the robot falls through the ground.
-  * `BipedalWalk.slx` - The main Simulink/Simscape Multibody model: Demonstrates the bipedal walking of the robot.
+  * `BipedalWalk.slx` - The Simulink/Simscape Multibody model demonstrates the bipedal walking of the robot without any time-varying payload.
+  *  `BipedalWalkFinal.slx` - The main Simulink/Simscape Multibody model: Demonstrates the bipedal walking of the robot implementing both MRAC and MPC.
   * `StateSpace.m` - MATLAB script that defines the 2nd order LIPM model (using ZMP and COM difference) as a 1st order state-space representation, defines the control horizon limits and other constraints for the MPC.
   * `ref.m` - The script functions as the Trajectory Generator. By generating a discrete ZMP staircase for the sagittal plane and a periodic oscillation for the lateral plane, it provides the necessary setpoints for the controller to execute a stable, dynamic gait while maintaining the ZMP within the robot's foot in each successive footstep.
   * `GaitScheduler.m` - It generates the joint-space trajectories/kineamaics for the leg movement. It implements the finite-state logic required to transition each leg between 'Swing' and 'Stance' phases, ensuring that while the MPC maintains balance, the physical limbs execute the lifting and placement necessary to achieve the desired step length and height.
